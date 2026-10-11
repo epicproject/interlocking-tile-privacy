@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - Interlocking Tile (Block Puzzle)</title>
+<meta name="description" content="Privacy policy for Interlocking Tile, an offline block puzzle game. No accounts, no ads, no analytics, no internet permission.">
+<meta name="theme-color" content="#0F172A">
+<style>
+:root {
+  --bg: #0F172A; --bg2: #1E1B4B; --text: #DCE5F8; --muted: #9FB0D3;
+  --gold1: #FFE9A0; --gold2: #D99A2B; --gold3: #7A4E10; --cyan: #38BDF8; --green: #52C41A;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; color: var(--text); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(900px 500px at 12% -5%, rgba(232,120,46,.18), transparent 60%),
+              radial-gradient(800px 600px at 100% 30%, rgba(129,140,248,.18), transparent 60%),
+              radial-gradient(700px 500px at 20% 100%, rgba(56,189,248,.12), transparent 60%),
+              linear-gradient(180deg, var(--bg), var(--bg2) 55%, var(--bg));
+  background-attachment: fixed; min-height: 100vh;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 28px 18px 60px; }
+header { text-align: center; padding: 18px 0 8px; }
+.plate {
+  width: 150px; height: 150px; margin: 0 auto 18px; border-radius: 36px; display: grid; place-items: center;
+  background: linear-gradient(135deg, #3A4A63, #1C2740 55%, #0F172A);
+  border: 2px solid #5B6C93; box-shadow: 0 18px 40px rgba(0,0,0,.45), inset 0 2px 0 rgba(255,255,255,.15);
+  animation: float 4s ease-in-out infinite;
+}
+.emblem { width: 120%; height: 120%; }
+.tile { animation: pop .7s cubic-bezier(.2,1.4,.4,1) both; transform-box: fill-box; }
+.t1 { animation-delay: .05s; } .t2 { animation-delay: .12s; } .t3 { animation-delay: .19s; }
+.t4 { animation-delay: .26s; } .t5 { animation-delay: .33s; } .t6 { animation-delay: .40s; }
+@keyframes pop { from { opacity: 0; transform: translate(var(--dx, 0), -30px) scale(.4); } to { opacity: 1; } }
+@keyframes float { 50% { transform: translateY(-8px); } }
+h1 {
+  margin: 0; font-size: clamp(28px, 6vw, 44px); line-height: 1.1; font-weight: 900; font-style: italic; letter-spacing: .5px;
+  background: linear-gradient(180deg, #FFF1B8, #F6B53A 55%, #E8782E); -webkit-background-clip: text; background-clip: text;
+  color: transparent; filter: drop-shadow(0 3px 0 #4A1F06);
+}
+.sub { letter-spacing: 8px; font-weight: 800; font-size: 13px; color: rgba(255,255,255,.75); margin-top: 6px; }
+.ribbon {
+  display: inline-block; margin: 22px 0 6px; padding: 8px 34px 10px; font-weight: 900; font-style: italic; letter-spacing: 1px;
+  color: #fff; text-shadow: 0 2px 0 #5E2A00, 0 0 8px #5E2A00; border: 2px solid #5E2A00; border-radius: 12px;
+  background: linear-gradient(180deg, #FFDA7A, #FF9A1F); box-shadow: 0 5px 0 #C25E00, 0 10px 20px rgba(0,0,0,.35);
+}
+.meta { color: var(--muted); font-size: 13px; letter-spacing: 1px; font-weight: 700; }
+.badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 22px 0 8px; }
+.badge {
+  padding: 8px 14px; border-radius: 999px; font-size: 13px; font-weight: 800; letter-spacing: .5px;
+  background: linear-gradient(180deg, #22305A, #111A33); border: 2px solid #3A4966;
+}
+.badge b { color: var(--green); }
+nav {
+  margin: 20px 0 6px; padding: 14px; border-radius: 20px; display: flex; flex-wrap: wrap; gap: 8px;
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
+}
+nav a {
+  color: var(--text); text-decoration: none; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); transition: .15s;
+}
+nav a:hover { background: rgba(56,189,248,.2); border-color: var(--cyan); }
+.card {
+  margin-top: 18px; padding: 22px 22px 14px; border-radius: 22px; position: relative;
+  background: linear-gradient(180deg, #263760, #10182F);
+  border: 3px solid transparent; background-clip: padding-box; box-shadow: 0 14px 30px rgba(0,0,0,.35);
+}
+.card::before {
+  content: ""; position: absolute; inset: -3px; z-index: -1; border-radius: 25px;
+  background: linear-gradient(180deg, var(--gold1), var(--gold2) 55%, var(--gold3));
+}
+.card h2 { margin: 0 0 10px; font-size: 20px; font-weight: 900; font-style: italic; letter-spacing: .5px; color: #fff; display: flex; align-items: center; gap: 12px; }
+.num {
+  flex: none; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; font-style: normal; font-size: 16px;
+  color: #3A2A06; background: radial-gradient(circle at 35% 30%, #FFF3B0, #F2C14E 55%, #A9781A); box-shadow: 0 2px 0 #5A3A06;
+}
+.card p, .card li { margin: 0 0 10px; }
+.card ul { padding-left: 20px; margin: 0 0 6px; }
+.card li::marker { color: var(--gold2); }
+b { color: #fff; }
+a { color: var(--cyan); }
+footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 36px; }
+.btn {
+  display: inline-block; margin-top: 14px; padding: 12px 26px; border-radius: 18px; font-weight: 900; font-style: italic;
+  text-decoration: none; color: #fff; text-shadow: 0 2px 0 #18460A; border: 2px solid #18460A;
+  background: linear-gradient(180deg, #B6F27A, #52C41A); box-shadow: 0 5px 0 #2F8A10;
+}
+.btn:active { transform: translateY(4px); box-shadow: 0 1px 0 #2F8A10; }
+@media (prefers-reduced-motion: reduce) { .plate, .tile { animation: none; } }
+@media (max-width: 520px) { .card { padding: 18px 16px 8px; } .plate { width: 124px; height: 124px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="plate"><svg class="emblem" viewBox="10 10 88 88" aria-hidden="true"><defs><path id="tile" d="M14.14,0.00 L14.01,1.23 L13.61,2.40 L12.96,3.47 L12.06,4.39 L10.89,5.08 L9.01,5.20 L7.19,5.04 L6.10,5.12 L5.22,5.22 L4.48,5.34 L3.86,5.52 L3.33,5.76 L2.85,6.10 L2.39,6.55 L1.91,7.13 L1.38,7.84 L0.77,8.75 L0.00,10.40 L-1.05,11.97 L-2.23,12.64 L-3.47,12.96 L-4.73,12.99 L-5.94,12.75 L-7.07,12.25 L-8.07,11.52 L-8.89,10.59 L-9.49,9.49 L-9.83,8.25 L-9.85,6.89 L-9.01,5.20 L-7.96,3.71 L-7.48,2.72 L-7.13,1.91 L-6.87,1.21 L-6.71,0.59 L-6.66,0.00 L-6.71,-0.59 L-6.87,-1.21 L-7.13,-1.91 L-7.48,-2.72 L-7.96,-3.71 L-9.01,-5.20 L-9.85,-6.89 L-9.83,-8.25 L-9.49,-9.49 L-8.89,-10.59 L-8.07,-11.52 L-7.07,-12.25 L-5.94,-12.75 L-4.73,-12.99 L-3.47,-12.96 L-2.23,-12.64 L-1.05,-11.97 L-0.00,-10.40 L0.77,-8.75 L1.38,-7.84 L1.91,-7.13 L2.39,-6.55 L2.85,-6.10 L3.33,-5.76 L3.86,-5.52 L4.48,-5.34 L5.22,-5.22 L6.10,-5.12 L7.19,-5.04 L9.01,-5.20 L10.89,-5.08 L12.06,-4.39 L12.96,-3.47 L13.61,-2.40 L14.01,-1.23Z"/><linearGradient id="g0" gradientUnits="userSpaceOnUse" x1="-10" y1="-10" x2="10" y2="10"><stop offset="0" stop-color="#F8C86B"/><stop offset=".55" stop-color="#F6B53A"/><stop offset="1" stop-color="#B8882C"/></linearGradient><linearGradient id="g1" gradientUnits="userSpaceOnUse" x1="-10" y1="-10" x2="10" y2="10"><stop offset="0" stop-color="#D68F7D"/><stop offset=".55" stop-color="#C96A52"/><stop offset="1" stop-color="#97503E"/></linearGradient><linearGradient id="g2" gradientUnits="userSpaceOnUse" x1="-10" y1="-10" x2="10" y2="10"><stop offset="0" stop-color="#F5C7B3"/><stop offset=".55" stop-color="#F2B49A"/><stop offset="1" stop-color="#B68774"/></linearGradient><linearGradient id="g3" gradientUnits="userSpaceOnUse" x1="-10" y1="-10" x2="10" y2="10"><stop offset="0" stop-color="#B09488"/><stop offset=".55" stop-color="#957060"/><stop offset="1" stop-color="#705448"/></linearGradient><linearGradient id="g4" gradientUnits="userSpaceOnUse" x1="-10" y1="-10" x2="10" y2="10"><stop offset="0" stop-color="#EA7D6C"/><stop offset=".55" stop-color="#E3523B"/><stop offset="1" stop-color="#AA3E2C"/></linearGradient><linearGradient id="g5" gradientUnits="userSpaceOnUse" x1="-10" y1="-10" x2="10" y2="10"><stop offset="0" stop-color="#EE9A62"/><stop offset=".55" stop-color="#E8782E"/><stop offset="1" stop-color="#AE5A22"/></linearGradient><linearGradient id="g6" gradientUnits="userSpaceOnUse" x1="-10" y1="-10" x2="10" y2="10"><stop offset="0" stop-color="#9C7F74"/><stop offset=".55" stop-color="#7B5445"/><stop offset="1" stop-color="#5C3F34"/></linearGradient></defs><g class="tile t0" transform="translate(54.00,54.00)"><use href="#tile" fill="#000" opacity=".28" transform="translate(.5,1.6)"/><use href="#tile" fill="#7B5A1D" transform="translate(0,.9)"/><use href="#tile" fill="url(#g0)" stroke="#624817" stroke-width=".5"/></g><g class="tile t1" transform="translate(43.44,35.72)"><use href="#tile" fill="#000" opacity=".28" transform="translate(.5,1.6)"/><use href="#tile" fill="#643529" transform="translate(0,.9)"/><use href="#tile" fill="url(#g1)" stroke="#502A21" stroke-width=".5"/></g><g class="tile t2" transform="translate(64.56,35.72)"><use href="#tile" fill="#000" opacity=".28" transform="translate(.5,1.6)"/><use href="#tile" fill="#795A4D" transform="translate(0,.9)"/><use href="#tile" fill="url(#g2)" stroke="#61483E" stroke-width=".5"/></g><g class="tile t3" transform="translate(32.89,54.00)"><use href="#tile" fill="#000" opacity=".28" transform="translate(.5,1.6)"/><use href="#tile" fill="#4A3830" transform="translate(0,.9)"/><use href="#tile" fill="url(#g3)" stroke="#3C2D26" stroke-width=".5"/></g><g class="tile t4" transform="translate(75.11,54.00)"><use href="#tile" fill="#000" opacity=".28" transform="translate(.5,1.6)"/><use href="#tile" fill="#72291E" transform="translate(0,.9)"/><use href="#tile" fill="url(#g4)" stroke="#5B2118" stroke-width=".5"/></g><g class="tile t5" transform="translate(43.44,72.28)"><use href="#tile" fill="#000" opacity=".28" transform="translate(.5,1.6)"/><use href="#tile" fill="#743C17" transform="translate(0,.9)"/><use href="#tile" fill="url(#g5)" stroke="#5D3012" stroke-width=".5"/></g><g class="tile t6" transform="translate(64.56,72.28)"><use href="#tile" fill="#000" opacity=".28" transform="translate(.5,1.6)"/><use href="#tile" fill="#3E2A22" transform="translate(0,.9)"/><use href="#tile" fill="url(#g6)" stroke="#31221C" stroke-width=".5"/></g></svg></div>
+    <h1>INTERLOCKING TILE</h1>
+    <div class="sub">BLOCK PUZZLE</div>
+    <div class="ribbon">PRIVACY POLICY</div>
+    <div class="meta">EFFECTIVE 11 OCTOBER 2026 &nbsp;&bull;&nbsp; VERSION 1</div>
+    <div class="badges">
+      <span class="badge"><b>&#10003;</b> Works offline</span>
+      <span class="badge"><b>&#10003;</b> No accounts</span>
+      <span class="badge"><b>&#10003;</b> No ads or analytics</span>
+      <span class="badge"><b>&#10003;</b> No internet permission</span>
+    </div>
+  </header>
+
+  <nav aria-label="Contents"><a href="#s1">The short version</a><a href="#s2">What is stored on your device</a><a href="#s3">How it is used</a><a href="#s4">Sharing</a><a href="#s5">Photos</a><a href="#s6">Permissions</a><a href="#s7">Third-party code</a><a href="#s8">Keeping and deleting data</a><a href="#s9">Certificates and security</a><a href="#s10">Children</a><a href="#s11">Changes and contact</a></nav>
+
+  <section class="card" id="s1"><h2><span class="num">1</span>The short version</h2><p>Interlocking Tile is an offline puzzle game. There are no accounts, no ads, no analytics and no servers.</p><p>The app does not request internet permission, so it cannot send your information anywhere. Everything you enter stays on your phone.</p></section><section class="card" id="s2"><h2><span class="num">2</span>What is stored on your device</h2><ul><li><b>Profile</b> (only what you type or choose): first name, second name, username, optional email, optional country, optional &ldquo;about me&rdquo; text and an optional profile photo.</li><li><b>Game data:</b> levels cleared, stars, best times, moves, total play time, your current level and your settings (music, sound effects, vibration, tile theme).</li><li><b>Certificate data:</b> a random certificate number and the date your profile was created.</li><li><b>Error log:</b> a small text file of technical events (for example app errors, your Android version and phone model) so problems can be diagnosed. It never leaves your phone unless you choose to copy or share it.</li></ul></section><section class="card" id="s3"><h2><span class="num">3</span>How it is used</h2><p>Only to run the game: to show your profile and rank, remember your progress, create your ranking certificate and fix problems. It is not used for advertising, profiling or sale.</p></section><section class="card" id="s4"><h2><span class="num">4</span>Sharing</h2><p>Nothing is shared automatically. If you tap <b>Share</b> on your ranking certificate, Android&rsquo;s share sheet opens with the certificate image and its verification code. Your email and country appear only if you left them switched on; you can hide them first.</p><p>The same applies to the log screen&rsquo;s Share button. Once you send something to another app or person, that app&rsquo;s own policy applies.</p></section><section class="card" id="s5"><h2><span class="num">5</span>Photos</h2><p>Your profile photo is chosen with Android&rsquo;s photo picker, so the app never gets access to the rest of your photos. A square 512&nbsp;px copy is saved in the app&rsquo;s private storage. You can remove it any time from My Profile.</p></section><section class="card" id="s6"><h2><span class="num">6</span>Permissions</h2><p>The app requests one permission only: <b>vibration</b> (for haptic feedback). It does not request internet, location, contacts, microphone, camera or storage permissions.</p></section><section class="card" id="s7"><h2><span class="num">7</span>Third-party code</h2><p>The app uses open-source libraries (Android Jetpack and ZXing for drawing QR codes). They run entirely on your device and do not collect data.</p></section><section class="card" id="s8"><h2><span class="num">8</span>Keeping and deleting data</h2><p>Data stays until you clear the app&rsquo;s storage or uninstall the app (Android Settings &rsaquo; Apps &rsaquo; Interlocking Tile &rsaquo; Storage &rsaquo; Clear data). You can also edit your details, hide your email and country, or remove your photo inside the app.</p><p>If automatic backup is on for your phone, Android may include the app&rsquo;s data in your Google backup. That is controlled by your device and Google settings.</p></section><section class="card" id="s9"><h2><span class="num">9</span>Certificates and security</h2><p>Input is filtered and checked before it is stored, and data is kept in the app&rsquo;s private storage. Ranking certificates carry a signed code that shows if the printed details were edited. This detects changes; it cannot stop someone copying a picture.</p></section><section class="card" id="s10"><h2><span class="num">10</span>Children</h2><p>The game collects nothing on any server, so it does not collect children&rsquo;s data. Parents should supervise any name, email or photo a child enters.</p></section><section class="card" id="s11"><h2><span class="num">11</span>Changes and contact</h2><p>If this policy changes, the new version will be shown in the app. Questions or requests: <a href="https://github.com/epicproject/interlocking-tile-privacy/issues">open an issue on this project&rsquo;s Issues page</a>.</p></section>
+
+  <footer>
+    <a class="btn" href="https://github.com/epicproject/interlocking-tile-privacy/issues">Contact / open an issue</a>
+    <p>&copy; 2026 Interlocking Tile. This page matches the privacy policy shown inside the app.</p>
+  </footer>
+</div>
+</body>
+</html>
